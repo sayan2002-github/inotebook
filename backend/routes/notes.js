@@ -17,6 +17,7 @@ router.post(
   ],
   async (req, res) => {
     try {
+      // Check whether the data is valid or not
       const result = validationResult(req);
       if (!result.isEmpty()) {
         return res.send({ errors: result.array() });
@@ -31,6 +32,7 @@ router.post(
       res.send(note);
     } catch (error) {
       console.log(error);
+      res.status(500).json({ error: "Error! Something happened.." });
     }
   }
 );
