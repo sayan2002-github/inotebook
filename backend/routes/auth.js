@@ -96,7 +96,7 @@ router.post("/login", [
 // Route3: Get user data using POST request on /api/auth/getuser : Login required
 router.post("/getuser", getUser, async(req, res)=>{
   try {
-    const userId = req.userId;
+    const userId = req.user.id;
     const user = await Users.findById(userId);
   
     res.send(user);
