@@ -1,0 +1,19 @@
+.form-container{
+    margin: 2rem 0;
+}
+
+.notes-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem 4rem;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    width: 30%;
+}
+
+.btn-grp{
+    display: flex;
+    gap: 1rem;
+}
